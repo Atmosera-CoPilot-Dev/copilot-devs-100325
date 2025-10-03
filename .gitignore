@@ -5,3 +5,64 @@
 *.ppsx
 *.pot
 *.potx
+
+# Visual Studio build folders and files
+.vs/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Tt]est[Rr]esult*/
+[Rr]elease*/
+[Dd]ebug*/
+ x64/
+ x86/
+ [Aa][Rr][Mm]*/
+ [Ww][Ii][Nn]32/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.vcxproj.user
+*.pdb
+*.opendb
+
+# Visual Studio cache / profiler
+*.localhistory
+*.ncrunch*
+*.vsp
+*.vspx
+*.psess
+*.pidb
+*.svclog
+
+# NuGet
+*.nupkg
+.nuget/
+packages/*
+!packages/build/
+*.snupkg
+
+# VS Code settings (allow extensions.json & settings.json if desired)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Dotnet artifacts
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.dll
+*.exe
+
+# Others
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+StyleCopReport.xml
+
+# Temporary files
+*.tmp
+~$*
+*.bak
+*.swp
+
