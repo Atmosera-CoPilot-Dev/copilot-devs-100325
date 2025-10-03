@@ -23,9 +23,16 @@ namespace Tasks.Tests
             Assert.IsNotNull(tradeFileField);
             Assert.IsNotNull(testField);
 
-            Assert.AreEqual(3, (int)numConsumersField.GetValue(processor));
-            Assert.AreEqual("mydata.csv", (string)tradeFileField.GetValue(processor));
-            Assert.AreSame(predicate, testField.GetValue(processor));
+            object? numVal = numConsumersField!.GetValue(processor);
+            Assert.IsNotNull(numVal);
+            Assert.IsTrue(numVal is int && (int)numVal == 3, "numConsumers expected 3");
+
+            object? fileVal = tradeFileField!.GetValue(processor);
+            Assert.IsNotNull(fileVal);
+            Assert.AreEqual("mydata.csv", fileVal as string);
+
+            object? testVal = testField!.GetValue(processor);
+            Assert.AreSame(predicate, testVal);
         }
 
         [TestMethod]
@@ -34,7 +41,9 @@ namespace Tasks.Tests
             var processor = new TradeDayProcessor(1, "file.csv", null);
             var t = typeof(TradeDayProcessor);
             var testField = t.GetField("test", BindingFlags.NonPublic | BindingFlags.Instance);
-            Assert.IsNull(testField.GetValue(processor));
+            Assert.IsNotNull(testField);
+            var val = testField!.GetValue(processor);
+            Assert.IsNull(val);
         }
     }
 }
