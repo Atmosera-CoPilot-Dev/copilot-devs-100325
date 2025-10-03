@@ -3,11 +3,11 @@
 
 git add .
 
-git commit -m "Updated"
+git commit -m "Bumped version"
 
 git pull origin main
 
-git push 
+git push orign main
 
 # Check if the push was successful
 if [ $? -eq 0 ]; then
