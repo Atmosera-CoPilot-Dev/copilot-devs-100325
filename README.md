@@ -1,4 +1,4 @@
-# Welcome to the GitHub Copilot for Developers - Advanced Topics, Techniques, and Security Course!
+# Columbia Bank GitHub Copilot for Developers - Advanced Topics, Techniques, and Security Course!
 
 Instructor: Andrew Scoppa
 
